@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weathy</title>
+        <link rel="stylesheet" href="css/styles.css">
+
+        {{!-- GOOGLE FONTS --}}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <nav class="navigation">
+            <p class="header-item1">Created with &#129505; by Aman Verma</p>
+            <div></div>
+            <div class="header-item2">
+                <p><a href="#">Resume</a></p>
+                <p><a href="#">Projects</a></p>
+                <p><a href="#">Blog</a></p>
+          </div>
+        </nav>
+
+        {{!-- Main grid starts here --}}
+        <div class="container">
+
+            {{!-- Search bar --}}
+            <div class="search">
+                <form class="input-box">
+                    <input class="input"  required="required">
+                    <span>Search city...</span>
+                    <button class="button-28 search-button" type="submit" >Search</button>
+                </form>
+            </div>
+
+            {{!-- Weather information --}}
+            <div class="content hidden">
+                <div class="container1">
+                    <p class="one">It is</p>
+                    <p class="two"><span  id="temp">23{{temp}}</span>ºC</p>
+                    <p class="three">Outside in <span id="cityName">{{cityName}}, </span> with <span id="article">{{article}}</span> <span id="weatherDescription">{{weatherDescription}}</span></p>
+                    <img class="four weather-icon" id="icon" src="http://openweathermap.org/img/wn/{{icon}}@3x.png" alt="">
+                    {{!-- <img class="fourtest weather-icon" id="icon" src="http://openweathermap.org/img/wn/{{icon}}@3x.png" alt=""> --}}
+                    <p>All the units are metric by default</p>
+                </div>
+
+                 <div class="container2">
+                    <div class="temp-data">
+                        <p>Feels like: <span id="feels-like">{{feels_like}}</span>ºC</p>
+                        <p>Wind speed: <span id="speed">{{speed}}</span> km/hr</p>
+                        <p>Minimum Temperature: <span id="temp-max">{{temp_max}}</span>ºC</p>
+                        <p>Maximum Temperature: <span id="temp-min">{{temp_min}}</span>ºC</p>
+                    </div>
+                    <div class="additional-data">
+                        <p>Latitude : <span id="latitude">{{lat}}</span></p>
+                        <p>Longitude: <span id="longitude">{{lon}}</span></p>
+                        <p>Pressure: <span id="pressure">{{pressure}}</span> hPa</p>
+                        <p>Humidity: <span id="humidity">{{humidity}}</span>%</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="js/app.js"></script> 
+    </body>
+</html>

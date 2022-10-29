@@ -1,0 +1,4 @@
+1. Enter location through a form
+2. Pass the location the query
+3. The query will make a fetch request to the given path
+4. We have given path to respond to that request
